@@ -6,7 +6,7 @@
 // See the file LICENSE.txt for details.
 // 
 
-namespace Ninject.Web
+namespace Ninject.Web.Sitecore
 {
     using System;
     using System.Web;

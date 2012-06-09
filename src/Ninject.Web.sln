@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninject.Web", "Ninject.Web\Ninject.Web.csproj", "{6BA63AF5-7DF0-468B-925F-DD564AF59F7C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninject.Web.Sitecore", "Ninject.Web\Ninject.Web.Sitecore.csproj", "{6BA63AF5-7DF0-468B-925F-DD564AF59F7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

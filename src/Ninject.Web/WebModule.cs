@@ -17,7 +17,7 @@
 // </copyright>
 //-------------------------------------------------------------------------------
 
-namespace Ninject.Web
+namespace Ninject.Web.Sitecore
 {
     using System.Web;
     using Ninject.Modules;

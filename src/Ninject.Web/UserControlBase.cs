@@ -20,7 +20,7 @@
 using System;
 using System.Web.UI; 
 
-namespace Ninject.Web
+namespace Ninject.Web.Sitecore
 {
     /// <summary>
     /// A <see cref="UserControl"/> that supports injections.
