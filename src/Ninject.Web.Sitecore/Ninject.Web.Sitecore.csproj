@@ -8,7 +8,7 @@
     <ProjectGuid>{6BA63AF5-7DF0-468B-925F-DD564AF59F7C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ninject.Web.Sitecore.Sitecore</RootNamespace>
+    <RootNamespace>Ninject.Web.Sitecore</RootNamespace>
     <AssemblyName>Ninject.Web.Sitecore</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -57,10 +57,10 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>..\Ninject.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>Ninject.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ninject">
@@ -68,6 +68,9 @@
     </Reference>
     <Reference Include="Ninject.Web.Common">
       <HintPath>..\..\..\..\packages\Ninject.Web.Common.3.0.0.7\lib\net40-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\..\..\..\Client\bin\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Web" />
@@ -78,6 +81,7 @@
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="HttpHandlerBase.cs" />
+    <Compile Include="HttpRequestProcessorBase.cs" />
     <Compile Include="KernelContainer.cs" />
     <Compile Include="MasterPageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -113,6 +117,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ninject.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
