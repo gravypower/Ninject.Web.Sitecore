@@ -26,7 +26,7 @@ namespace Ninject.Web.Sitecore
     /// <summary>
     /// The web plugin implementation for MVC
     /// </summary>
-    public class NinjectWebHttpApplicationPlugin : NinjectComponent, INinjectHttpApplicationPlugin
+    public class NinjectWebSitecoreHttpApplicationPlugin : NinjectComponent, INinjectHttpApplicationPlugin
     {
         /// <summary>
         /// The kernel
@@ -37,7 +37,7 @@ namespace Ninject.Web.Sitecore
         /// Initializes a new instance of the <see cref="NinjectWebHttpApplicationPlugin"/> class.
         /// </summary>
         /// <param name="kernel">The kernel.</param>
-        public NinjectWebHttpApplicationPlugin(IKernel kernel)
+        public NinjectWebSitecoreHttpApplicationPlugin(IKernel kernel)
         {
             this.kernel = kernel;
         }

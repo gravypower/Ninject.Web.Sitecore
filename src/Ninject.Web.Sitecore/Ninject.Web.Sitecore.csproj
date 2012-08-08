@@ -64,13 +64,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ninject">
-      <HintPath>..\..\..\..\packages\Ninject.3.0.1.10\lib\net40\Ninject.dll</HintPath>
+      <HintPath>..\..\lib\Ninject\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="Ninject.Web.Common">
-      <HintPath>..\..\..\..\packages\Ninject.Web.Common.3.0.0.7\lib\net40-full\Ninject.Web.Common.dll</HintPath>
+      <HintPath>..\..\lib\Ninject.Web.Common\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Client">
+      <HintPath>..\..\lib\Sitecore\Sitecore.Client.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\..\..\..\Client\bin\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\..\lib\Sitecore\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Web" />
@@ -87,11 +90,20 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="NinjectHttpModule.cs" />
-    <Compile Include="NinjectWebHttpApplicationPlugin.cs" />
+    <Compile Include="NinjectWebSitecoreHttpApplicationPlugin.cs" />
     <Compile Include="PageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Pipelines\GetChromeData.cs" />
+    <Compile Include="Pipelines\GetContentEditorFields.cs" />
+    <Compile Include="Pipelines\GetPlaceholderRenderings.cs" />
+    <Compile Include="Pipelines\GetRenderingDatasource.cs" />
+    <Compile Include="Pipelines\HttpRequestBegin.cs" />
+    <Compile Include="Pipelines\HttpRequestEnd.cs" />
+    <Compile Include="Pipelines\RenderField.cs" />
+    <Compile Include="Pipelines\UiLoadLayout.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SitecoreEvent.cs" />
     <Compile Include="UserControlBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -121,6 +133,7 @@
   <ItemGroup>
     <None Include="Ninject.snk" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

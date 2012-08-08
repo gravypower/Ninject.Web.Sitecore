@@ -34,7 +34,7 @@ namespace Ninject.Web.Sitecore
         public override void Load()
         {
             base.Load();
-            this.Kernel.Components.Add<INinjectHttpApplicationPlugin, NinjectWebHttpApplicationPlugin>();
+            this.Kernel.Components.Add<INinjectHttpApplicationPlugin, NinjectWebSitecoreHttpApplicationPlugin>();
 
             this.Bind<HttpContext>().ToMethod(ctx => HttpContext.Current).InTransientScope();
         }
